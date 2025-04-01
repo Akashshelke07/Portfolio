@@ -17,15 +17,22 @@ const Navbar = () => {
     useEffect(() => {
         const handleResize = () => {
             const mobile = window.innerWidth <= 768;
-            setIsMobile(mobile);
-            setIsSidebarOpen(!mobile);
+            if (mobile !== isMobile) {
+                setIsMobile(mobile);
+                setIsSidebarOpen(!mobile);
+            } else if (!mobile && !isSidebarOpen) {
+                setIsSidebarOpen(true);
+            }
         };
 
         window.addEventListener('resize', handleResize);
+        handleResize();
+
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [isMobile, isSidebarOpen]);
 
     useEffect(() => {
+        // Add or remove the blur class when sidebar is opened or closed
         if (isSidebarOpen && isMobile) {
             document.body.classList.add('background-blur');
         } else {
@@ -33,43 +40,66 @@ const Navbar = () => {
         }
     }, [isSidebarOpen, isMobile]);
 
-    const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+    const toggleSidebar = () => {
+        if (isMobile) {
+            setIsSidebarOpen(!isSidebarOpen);
+        }
+    };
 
-    const handleLinkClick = () => isMobile && setIsSidebarOpen(false);
+    const handleLinkClick = () => {
+        if (isMobile) {
+            setIsSidebarOpen(false);
+        }
+    };
+
+    const iconStyle = {
+        width: '20px',
+        height: '20px',
+        marginRight: '12px',
+        verticalAlign: 'middle',
+        flexShrink: 0
+    };
 
     return (
         <>
             {isMobile && (
-                <button className="hamburger-button" onClick={toggleSidebar}>
+                <button className="hamburger-button" onClick={toggleSidebar} aria-label="Toggle navigation">
                     <GiHamburgerMenu size={24} />
                 </button>
             )}
 
-            <nav className={`navbar ${isSidebarOpen ? 'mobile-open' : 'mobile-closed'}`}>
+            <nav className={navbar ${isMobile ? (isSidebarOpen ? 'mobile-open' : 'mobile-closed') : 'desktop-visible'}}>
                 <div className="navbar-header">
                     <div className="profile-section">
                         <img src={akImage} alt="Akash Shelke" className="profile-image" />
-                        <h3>Akash Shelke</h3>
-                        <p>FullStack Developer</p>
-                        <h4>Email: <a href="mailto:skyler.in.ios@gmail.com">skyler.in.ios@gmail.com</a></h4>
+                        <div className="profile-info">
+                            <h3>Akash Shelke</h3>
+                            <p>FullStack Developer</p>
+                            <div className="profile-email">
+                                <h4> Email :- <a href="mailto:skyler.in.ios@gmail.com">skyler.in.ios@gmail.com</a></h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <ul className="nav-links">
-                    <li><Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={handleLinkClick}><IoHomeOutline />Home</Link></li>
-                    <li><Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''} onClick={handleLinkClick}><GoProjectSymlink />Projects</Link></li>
-                    <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={handleLinkClick}><LuContactRound />Contact</Link></li>
-                </ul>
+                <div className="navbar-content">
+                    <ul className="nav-links">
+                        <li><Link to="/" className={nav-link ${location.pathname === '/' ? 'active' : ''}} onClick={handleLinkClick}><IoHomeOutline style={iconStyle} />Home</Link></li>
+                        <li><Link to="/projects" className={nav-link ${location.pathname === '/projects' ? 'active' : ''}} onClick={handleLinkClick}><GoProjectSymlink style={iconStyle} />Projects</Link></li>
+                        <li><Link to="/contact" className={nav-link ${location.pathname === '/contact' ? 'active' : ''}} onClick={handleLinkClick}><LuContactRound style={iconStyle} />Contact</Link></li>
+                    </ul>
+                </div>
 
                 <div className="navbar-footer">
-                    <a href="https://drive.google.com/uc?export=download&id=1hFt2T0foel4twRbfWuGE_9ECXEvx7n_o" className="resume-button" target="_blank" rel="noopener noreferrer">
-                        <FiDownload /> Resume
+                    <a href="https://drive.google.com/uc?export=download&id=1hFt2T0foel4twRbfWuGE_9ECXEvx7n_o" download="Akash_Shelke_Resume.pdf" className="resume-button" target="_blank" rel="noopener noreferrer">
+                         <FiDownload style={{ marginRight: '8px', verticalAlign: 'middle' }} /> Resume
                     </a>
                     <div className="social-icons">
-                        <a href="https://www.instagram.com/skyler.in.io/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                        <a href="https://www.linkedin.com/in/akash-shelke-5b1520259/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                        <a href="https://x.com/akashshelke07" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-                        <a href="https://github.com/Akashshelke07" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                        <a href="https://www.instagram.com/skyler.in.io/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
+                        <a href="https://www.linkedin.com/in/akash-shelke-5b1520259/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn"><FaLinkedin /></a>
+                        <a href="https://x.com/akashshelke07" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Twitter"><FaTwitter /></a>
+                        <a href="https://www.facebook.com/your_profile" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
+                        <a href="https://github.com/Akashshelke07" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Github"><FaGithub /></a>
                     </div>
                 </div>
             </nav>
