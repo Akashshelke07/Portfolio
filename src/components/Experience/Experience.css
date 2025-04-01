@@ -1,0 +1,41 @@
+/* src/components/Experience.css */
+
+
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.company-logo {
+    width: 130px;
+    /* Adjust as needed */
+    height: 65px;
+    margin-right: 10px;
+    border-radius: 5px;
+    /* Optional: round the corners of the logo */
+}
+
+.experience-title h4 {
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.experience-title .experience-dates {
+    color: #aaa;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.experience-details ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #ccc;
+}
+
+.experience-details li {
+    margin-bottom: 5px;
+}
+
+/* Add hover styles to entire container element*/

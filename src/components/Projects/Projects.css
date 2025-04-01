@@ -1,0 +1,76 @@
+/* src/components/Projects.css */
+.projects-container {
+    padding: 20px;
+    color: #ccc;
+    /* Default text color */
+}
+
+.projects-container h2 {
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+/*New container called project-row*/
+.project-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Spacing between projects */
+    margin-bottom: 20px;
+    /* Add spacing below each row */
+}
+
+.project {
+    flex: 1 1 45%;
+    /* Grow, shrink, base width 45% */
+    margin-bottom: 20px;
+    /* Remove bottom margin from project*/
+    background-color: #333;
+    /* Card-like background */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    /* Set text color to white */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    /* Transition for glow */
+    border: 1px solid transparent;
+    /* Add transparent border for consistent sizing on hover */
+}
+
+.project:hover {
+    /*Hover code effect for that*/
+    background-color: rgba(76, 175, 80, 0.1);
+    /* Light green background on hover */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
+    /* Glowing shadow on hover */
+    border: 1px solid #4CAF50;
+    /* Solid Green */
+}
+
+.project h3 {
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.project .tech-stack {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.project .description {
+    line-height: 1.6;
+}
+
+/*Added responsiveness*/
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+    }
+
+    .project {
+        flex: 1;
+        margin-bottom: 20px;
+        /* Spacing for each box*/
+    }
+}
