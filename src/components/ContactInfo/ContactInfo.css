@@ -10,7 +10,8 @@
 }
 
 .contact-container {
-    width: 1250px;
+    margin-left: 250px;
+    width: 1000px;
     padding: 40px;
     background-color: #2a2a2a;
     border-radius: 15px;
@@ -112,6 +113,8 @@
     .contact-container {
         width: 95%;
         padding: 40px;
+        margin: 40px;
+
     }
 
     .contact-container h2 {
@@ -153,6 +156,8 @@
 @media (max-width: 480px) {
     .contact-container {
         padding: 25px;
+        margin: 45px;
+        overflow: none;
     }
 
     .contact-container h2 {
