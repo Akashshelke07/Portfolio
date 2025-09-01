@@ -1,76 +1,298 @@
 /* src/components/Projects.css */
 .projects-container {
-    padding: 20px;
-    color: #ccc;
-    /* Default text color */
+    padding: 20px 0;
+    color: #ddd;
 }
 
-.projects-container h2 {
-    color: #eee;
-    margin-bottom: 20px;
+.section-title {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
 }
 
-/*New container called project-row*/
+/* Project row layout */
 .project-row {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* Spacing between projects */
     margin-bottom: 20px;
-    /* Add spacing below each row */
 }
 
-.project {
+.project-row .card {
     flex: 1 1 45%;
-    /* Grow, shrink, base width 45% */
-    margin-bottom: 20px;
-    /* Remove bottom margin from project*/
-    background-color: #333;
-    /* Card-like background */
-    padding: 20px;
+    min-width: 0;
+    /* Prevent flex items from overflowing */
+}
+
+/* Project item styling - exactly matching Home.css */
+.project-item {
+    margin-bottom: 25px;
+    padding: 15px;
     border-radius: 8px;
-    color: #fff;
-    /* Set text color to white */
-    transition: box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
-    /* Transition for glow */
-    border: 1px solid transparent;
-    /* Add transparent border for consistent sizing on hover */
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
-.project:hover {
-    /*Hover code effect for that*/
-    background-color: rgba(76, 175, 80, 0.1);
-    /* Light green background on hover */
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
-    /* Glowing shadow on hover */
-    border: 1px solid #4CAF50;
-    /* Solid Green */
+.project-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(76, 175, 80, 0.3);
+    transform: translateY(-2px);
 }
 
-.project h3 {
-    color: #ddd;
-    margin-bottom: 5px;
-}
-
-.project .tech-stack {
-    font-size: 0.9em;
-    color: #aaa;
+.project-header {
     margin-bottom: 10px;
 }
 
-.project .description {
-    line-height: 1.6;
+.project-header h4 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-/*Added responsiveness*/
+.project-header h4 a {
+    color: #4ade80;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-header h4 a:hover {
+    color: #4CAF50;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tech-tag {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4ade80;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.project-details {
+    list-style: none;
+    padding-left: 0;
+    color: #ddd;
+}
+
+.project-details li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.project-details li:before {
+    content: "▸";
+    color: #4ade80;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.project-details li:hover {
+    color: #fff;
+    transition: color 0.2s ease;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .project-row {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 20px;
     }
 
-    .project {
-        flex: 1;
+    .project-row .card {
+        flex: 1 1 45%;
+        min-width: 0;
+        /* Prevent flex items from overflowing */
+    }
+
+    /* Project item styling - exactly matching Home.css */
+    .project-item {
+        margin-bottom: 25px;
+        padding: 15px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .project-item:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(76, 175, 80, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .project-header {
+        margin-bottom: 10px;
+    }
+
+    .project-header h4 {
+        color: #fff;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .project-header h4 a {
+        color: #4ade80;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .project-header h4 a:hover {
+        color: #4CAF50;
+    }
+
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .tech-tag {
+        background-color: rgba(76, 175, 80, 0.2);
+        color: #4ade80;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+    }
+
+    .project-details {
+        list-style: none;
+        padding-left: 0;
+        color: #ddd;
+    }
+
+    .project-details li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+        line-height: 1.5;
+    }
+
+    .project-details li:before {
+        content: "▸";
+        color: #4ade80;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    .project-details li:hover {
+        color: #fff;
+        transition: color 0.2s ease;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
         margin-bottom: 20px;
-        /* Spacing for each box*/
+    }
+
+    .project-row .card {
+        flex: 1 1 45%;
+        min-width: 0;
+        /* Prevent flex items from overflowing */
+    }
+
+    /* Project item styling - exactly matching Home.css */
+    .project-item {
+        margin-bottom: 25px;
+        padding: 15px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .project-item:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(76, 175, 80, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .project-header {
+        margin-bottom: 10px;
+    }
+
+    .project-header h4 {
+        color: #fff;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .project-header h4 a {
+        color: #4ade80;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .project-header h4 a:hover {
+        color: #4CAF50;
+    }
+
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .tech-tag {
+        background-color: rgba(76, 175, 80, 0.2);
+        color: #4ade80;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+    }
+
+    .project-details {
+        list-style: none;
+        padding-left: 0;
+        color: #ddd;
+    }
+
+    .project-details li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+        line-height: 1.5;
+    }
+
+    .project-details li:before {
+        content: "▸";
+        color: #4ade80;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    .project-details li:hover {
+        color: #fff;
+        transition: color 0.2s ease;
     }
 }

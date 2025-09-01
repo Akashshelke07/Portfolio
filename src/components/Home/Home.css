@@ -7,7 +7,6 @@
     box-sizing: border-box;
     width: 100%;
     flex-direction: column;
-    
 }
 
 .content-card {
@@ -24,49 +23,320 @@
     margin-bottom: 30px;
 }
 
-.skills-section h4 {
-    color: #eee;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-.skill-box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 10px;
-}
-
-.skill-box {
-    background-color: #444;
-    border-radius: 4px;
-    padding: 5px 10px;
-    color: #ccc;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
-    flex: 0 0 auto;
-}
-
-.skill-box:hover {
-    box-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50;
+/* Professional About Me Styles */
+.about-me-card {
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(76, 175, 80, 0.02) 100%);
+    border: 1px solid rgba(76, 175, 80, 0.15);
+    transition: all 0.3s ease;
 }
 
 .about-me-card:hover {
-    background-color: rgba(76, 175, 80, 0.1);
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.12) 0%, rgba(76, 175, 80, 0.04) 100%);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+    transform: translateY(-2px);
 }
 
-.experience-card:hover {
-    background-color: rgba(76, 175, 80, 0.1);
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
+.about-me-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #fff;
+    position: relative;
 }
 
-.about-me-card {
+.about-me-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    border-radius: 2px;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about-me-intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: justify;
+    color: #e0e0e0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.professional-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+    transition: all 0.2s ease;
+}
+
+.highlight-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(5px);
+}
+
+.highlight-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.highlight-content {
+    flex: 1;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.highlight-content strong {
+    color: #4ade80;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Professional Experience Card Styles */
+.professional-experience-card {
     color: white;
+    padding: 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(33, 150, 243, 0.02) 100%);
+    border: 1px solid rgba(33, 150, 243, 0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
 }
 
-.experience-card {
+.professional-experience-card:hover {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.12) 0%, rgba(33, 150, 243, 0.04) 100%);
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Professional Skills Card Styles */
+.professional-skills-card {
     color: white;
+    padding: 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.08) 0%, rgba(156, 39, 176, 0.02) 100%);
+    border: 1px solid rgba(156, 39, 176, 0.15);
+    transition: all 0.3s ease;
+}
+
+.professional-skills-card:hover {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.12) 0%, rgba(156, 39, 176, 0.04) 100%);
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Section Title Styles */
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #fff;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.professional-experience-card .section-title::after {
+    background: linear-gradient(90deg, #2196F3, #1976D2);
+}
+
+.professional-skills-card .section-title::after {
+    background: linear-gradient(90deg, #9C27B0, #7B1FA2);
+}
+
+/* Skills Content Styles */
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skills-category {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.skills-category:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(156, 39, 176, 0.3);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(156, 39, 176, 0.3);
+}
+
+.category-icon {
+    font-size: 1.4rem;
+    filter: drop-shadow(0 0 8px rgba(156, 39, 176, 0.6));
+}
+
+.category-title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.professional-skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.professional-skill-item:hover {
+    background: rgba(156, 39, 176, 0.1);
+    border-color: rgba(156, 39, 176, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.2);
+}
+
+.skill-name {
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.skill-level {
+    color: #bb86fc;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    background: rgba(187, 134, 252, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(187, 134, 252, 0.2);
+}
+
+/* Experience Content Wrapper */
+.experience-content {
+    width: 100%;
+}
+
+/* Projects Section Styles */
+.projects-section {
+    color: #ddd;
+}
+
+.project-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(76, 175, 80, 0.3);
+    transform: translateY(-2px);
+}
+
+.project-header {
+    margin-bottom: 10px;
+}
+
+.project-header h4 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tech-tag {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4ade80;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.project-details {
+    list-style: none;
+    padding-left: 0;
+    color: #ddd;
+}
+
+.project-details li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+    font-size: inherit;
+}
+
+.project-details li:before {
+    content: "▸";
+    color: #4ade80;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.project-details li:hover {
+    color: #fff;
+    transition: color 0.2s ease;
 }
 
 .footer {
@@ -75,30 +345,128 @@
     text-align: center;
     padding: 20px;
     position: relative;
-    /* Changed from absolute to relative */
     width: 100%;
     font-size: 1.2em;
     letter-spacing: 1px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .home-container {
-        width: 100%;
-        padding: 10px;
+        padding: 15px;
     }
 
     .content-card {
-        padding: 20px;
-        width: 100%;
+        padding: 25px;
         max-width: none;
     }
 
-    .skill-box-container {
-        justify-content: flex-start;
+    .home-section {
+        margin-bottom: 25px;
     }
 
-    .skill-box {
-        flex: 0 0 calc(50% - 8px);
+    /* Professional About Me - Tablet */
+    .about-me-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    .about-me-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .about-me-intro {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .highlight-item {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .highlight-icon {
+        font-size: 1.1rem;
+    }
+
+    .highlight-content {
+        font-size: 0.95rem;
+    }
+
+    /* Professional Experience - Tablet */
+    .professional-experience-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    .professional-experience-card .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    /* Professional Skills - Tablet */
+    .professional-skills-card {
+        padding: 25px;
+    }
+
+    .professional-skills-card .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .skills-content {
+        gap: 25px;
+    }
+
+    .skills-category {
+        padding: 20px;
+    }
+
+    .category-header {
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .category-icon {
+        font-size: 1.2rem;
+    }
+
+    .category-title {
+        font-size: 1.1rem;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 12px;
+    }
+
+    .professional-skill-item {
+        padding: 10px 15px;
+    }
+
+    .skill-name {
+        font-size: 0.9rem;
+    }
+
+    .skill-level {
+        font-size: 0.8rem;
+    }
+
+    /* Projects section responsive */
+    .project-item {
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    .project-header h4 {
+        font-size: 1rem;
+    }
+
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 2px 6px;
     }
 
     body,
@@ -112,55 +480,163 @@
         padding: 10px;
     }
 
-    .skill-box-container {
-        gap: 12px;
-    }
-
-    .skill-box {
-        flex: 0 0 100%;
-        /* One item per row */
-    }
-
-    .skills-section h4 {
-        color: #eee;
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-
     .content-card {
-        padding: 15px;
+        padding: 20px;
+    }
+
+    .home-section {
+        margin-bottom: 20px;
+    }
+
+    /* Professional About Me - Mobile */
+    .about-me-card {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .about-me-title {
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+    }
+
+    .about-me-title::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .about-me-content {
+        gap: 20px;
+    }
+
+    .about-me-intro {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .professional-highlights {
+        gap: 15px;
+    }
+
+    .highlight-item {
+        padding: 12px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .highlight-icon {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .highlight-content {
+        font-size: 0.85rem;
+        margin-top: -5px;
+    }
+
+    .highlight-content strong {
+        margin-bottom: 6px;
+        font-size: 0.9rem;
+    }
+
+    /* Professional Experience - Mobile */
+    .professional-experience-card {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .professional-experience-card .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+    }
+
+    .professional-experience-card .section-title::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    /* Professional Skills - Mobile */
+    .professional-skills-card {
+        padding: 20px;
+    }
+
+    .professional-skills-card .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+    }
+
+    .professional-skills-card .section-title::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .skills-content {
+        gap: 20px;
+    }
+
+    .skills-category {
+        padding: 18px;
+    }
+
+    .category-header {
+        gap: 8px;
+        margin-bottom: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category-icon {
+        font-size: 1.1rem;
+    }
+
+    .category-title {
+        font-size: 1rem;
+        margin-top: -5px;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .professional-skill-item {
+        padding: 10px 14px;
+    }
+
+    .skill-name {
+        font-size: 0.85rem;
+    }
+
+    .skill-level {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+    }
+
+    /* Projects section mobile */
+    .project-item {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .project-header h4 {
+        font-size: 0.95rem;
+    }
+
+    .project-details li {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+        padding-left: 15px;
+    }
+
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 2px 5px;
+        flex: 0 0 calc(50% - 4px);
+        text-align: center;
     }
 
     .footer {
         font-size: 1em;
-        /* Adjusted for smaller screens */
-        padding: 10px;
-    }
-
-    .skills-section h4 {
-        color: #eee;
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-
-    .skill-box-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 10px;
-    }
-
-    .skill-box {
-        background-color: #444;
-        border-radius: 4px;
-        padding: 5px 10px;
-        color: #ccc;
-        cursor: pointer;
-        transition: box-shadow 0.3s ease;
-        flex: 0 0 auto;
-    }
-
-    .skill-box:hover {
-        box-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50;
+        padding: 15px 10px;
     }
 }

@@ -8,62 +8,229 @@ const Home = () => {
     <div className="home-container">
       <div className="content-card">
         <section id="home" className="home-section">
-          <h2>Home</h2>
-
+          <h2 style={{ textAlign: 'center' }}>Home</h2>
+          
           <div className="card about-me-card">
-            <h3>About Me</h3>
-            <p>
-             Innovative Full-Stack Developer and DevOps Enthusiast with expertise in designing and deploying scalable, high-performance applications. Skilled in cloud computing, automation, and infrastructure as code (IaC) to enhance system efficiency. Proficient in front-end and back-end development, CI/CD pipelines, microservices, and containerization using Docker and Kubernetes. Experienced in AWS, Azure, and GCP for cloud solutions. Strong problem-solving abilities with a focus on performance optimization, security, and agile collaboration. Passionate about learning new technologies and driving innovation in software development and cloud engineering.
-            </p>
-          </div>
-
-          <div className="card experience-card">
-            <h3>Experience</h3>
-            <Experience />
-          </div>
-
-          <Card title="Skills">
-  <div className="skills-section">
-
-    <h4>Programming Languages:</h4>
-    <div className="skill-box-container">
-      <div className="skill-box">Java</div>
-      <div className="skill-box">JavaScript</div>
-    </div>
-
-    <h4>Web Technologies & Frameworks:</h4>
-    <div className="skill-box-container">
-      <div className="skill-box">HTML5</div>
-      <div className="skill-box">CSS3</div>
-      <div className="skill-box">React.js</div>
-      <div className="skill-box">Node.js</div>
-      <div className="skill-box">Express.js</div>
-      <div className="skill-box">Tailwind CSS</div>
-      <div className="skill-box">Bootstrap</div>
-    </div>
-
-    <h4>Databases:</h4>
-    <div className="skill-box-container">
-      <div className="skill-box">MongoDB</div>
-      <div className="skill-box">MySQL</div>
-    </div>
-
-    <h4>Tools & DevOps:</h4>
-    <div className="skill-box-container">
-      <div className="skill-box">Git</div>
-      <div className="skill-box">GitHub</div>
-      <div className="skill-box">Postman</div>
-      <div className="skill-box">Docker</div>
-      <div className="skill-box">Kubernetes</div>
-      <div className="skill-box">Ansible</div>
-      <div className="skill-box">CI/CD Pipelines</div>
-      <div className="skill-box">Jenkins</div>
-      <div className="skill-box">AWS</div>
-      <div className="skill-box">Azure</div>
-      <div className="skill-box">Google Cloud Platform (GCP)</div>
-    </div>
+            <h3 className="about-me-title">About Me</h3>
+            <div className="about-me-content">
+              <p className="about-me-intro">
+                I am a passionate <strong>Full Stack Developer</strong> and <strong>DevOps Engineer</strong> based in India, 
+                specializing in building scalable web applications and implementing robust cloud infrastructure solutions. 
+                With a strong commitment to continuous learning and innovation, I actively contribute to open source 
+                projects and mentor aspiring developers in their technical journey.
+              </p>
+              
+              <div className="professional-highlights">
+                <div className="highlight-item">
+                  <span className="highlight-icon">🔭</span>
+                  <div className="highlight-content">
+                    <strong>Current Focus:</strong> Advanced DevOps practices and cloud-native application development
+                  </div>
+                </div>
+                
+                <div className="highlight-item">
+                  <span className="highlight-icon">🌱</span>
+                  <div className="highlight-content">
+                    <strong>Technical Growth:</strong> Expanding expertise in Kubernetes orchestration, AWS cloud services, and Infrastructure as Code (IaC)
+                  </div>
+                </div>
+                
+                <div className="highlight-item">
+                  <span className="highlight-icon">👥</span>
+                  <div className="highlight-content">
+                    <strong>Leadership Role:</strong> Open Source Mentor at GirlScript Summer of Code (GSSoC) 2025
+                  </div>
+                </div>
+                
+                <div className="highlight-item">
+                  <span className="highlight-icon">🤝</span>
+                  <div className="highlight-content">
+                    <strong>Collaboration:</strong> Open to partnerships in MERN stack development and DevOps automation projects
+                  </div>
+                </div>
+                
+                <div className="highlight-item">
+                  <span className="highlight-icon">💡</span>
+                  <div className="highlight-content">
+                    <strong>Expertise Areas:</strong> Web Development, Cloud Infrastructure, DevOps Practices, and Open Source Technologies
+                  </div>
+                </div>
+              </div>
             </div>
-          </Card>
+          </div>
+          
+          <div className="card professional-experience-card">
+            <h3 className="section-title">Professional Experience</h3>
+            <div className="experience-content">
+              <Experience />
+            </div>
+          </div>
+          
+          <div className="card professional-skills-card">
+            <h3 className="section-title">Technical Skills & Expertise</h3>
+            <div className="skills-content">
+              <div className="skills-category">
+                <div className="category-header">
+                  <span className="category-icon">🎨</span>
+                  <h4 className="category-title">Frontend Development</h4>
+                </div>
+                <div className="skill-grid">
+                  <div className="professional-skill-item">
+                    <span className="skill-name">React.js</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">JavaScript</span>
+                    <span className="skill-level">Expert</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">HTML5</span>
+                    <span className="skill-level">Expert</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">CSS3</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Tailwind CSS</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Responsive Design</span>
+                    <span className="skill-level">Expert</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="skills-category">
+                <div className="category-header">
+                  <span className="category-icon">⚙️</span>
+                  <h4 className="category-title">Backend Development</h4>
+                </div>
+                <div className="skill-grid">
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Node.js</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Express.js</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">RESTful APIs</span>
+                    <span className="skill-level">Expert</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">MongoDB</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Firebase</span>
+                    <span className="skill-level">Intermediate</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Supabase</span>
+                    <span className="skill-level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="skills-category">
+                <div className="category-header">
+                  <span className="category-icon">💻</span>
+                  <h4 className="category-title">Programming Languages</h4>
+                </div>
+                <div className="skill-grid">
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Java</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">JavaScript</span>
+                    <span className="skill-level">Expert</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Python</span>
+                    <span className="skill-level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="skills-category">
+                <div className="category-header">
+                  <span className="category-icon">☁️</span>
+                  <h4 className="category-title">DevOps & Cloud Technologies</h4>
+                </div>
+                <div className="skill-grid">
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Docker</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Jenkins</span>
+                    <span className="skill-level">Intermediate</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Kubernetes</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">AWS EC2</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">GitHub Actions</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">CI/CD</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Vercel</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="skills-category">
+                <div className="category-header">
+                  <span className="category-icon">🛠️</span>
+                  <h4 className="category-title">Development Tools & Technologies</h4>
+                </div>
+                <div className="skill-grid">
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Git</span>
+                    <span className="skill-level">Expert</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">GitHub</span>
+                    <span className="skill-level">Expert</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">VS Code</span>
+                    <span className="skill-level">Expert</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Postman</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Redux</span>
+                    <span className="skill-level">Advanced</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Clerk Auth</span>
+                    <span className="skill-level">Intermediate</span>
+                  </div>
+                  <div className="professional-skill-item">
+                    <span className="skill-name">Cloudinary</span>
+                    <span className="skill-level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
