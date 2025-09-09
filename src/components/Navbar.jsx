@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook, FaGithub, FaReact } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook, FaGithub } from "react-icons/fa";
 import { IoHomeOutline } from "react-icons/io5";
 import { GoProjectSymlink } from "react-icons/go";
 import { LuContactRound } from "react-icons/lu";
 import akImage from './ak.jpg'; 
-import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FiDownload } from "react-icons/fi"; 
-import Card from './Card/Card.jsx'; // Import the Card component
+import Card from './Card/Card.jsx';
 
 const Navbar = () => {
     const location = useLocation();
@@ -51,7 +50,7 @@ const Navbar = () => {
             )}
             <nav className={`navbar ${isMobile ? (isSidebarOpen ? 'mobile-open' : 'mobile-closed') : ''}`}>
                 <div className="navbar-content">
-                    <Card title="Profile & Navigation" className="main-card">
+                    <Card className="main-card">
                         {/* Profile Section */}
                         <div className="profile-section">
                             <div className="profile-image-container">
@@ -63,12 +62,6 @@ const Navbar = () => {
                             </div>
                             <div className="profile-info">
                                 <h3 className="profile-name">Akash Shelke</h3> 
-                                <Card title="">
-                                    <div className="profile-title">
-                                        <FaReact className="react-icon" />
-                                        Full-Stack Developer | DevOps Engineer
-                                    </div>
-                                </Card>
                                 <div className="profile-email">
                                     <span>Email: </span>
                                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=skyler.in.ios@gmail.com">
@@ -105,7 +98,7 @@ const Navbar = () => {
                         {/* Resume and Social Section */}
                         <div className="footer-section">
                             <a
-                                href="https://drive.google.com/file/d/1hFt2T0foel4twRbfWuGE_9ECXEvx7n_o/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1kgCwpK6L8XDtPxCLYzqqGGi2iI7yl4Tt/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="resume-button"
