@@ -1,19 +1,53 @@
-/* src/components/Card/Card.css */
+/* Card Base Styles */
 .card {
-    background-color: #333;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
+    border-radius: 12px;
     padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    color: #ccc;
-    transition: box-shadow 0.3s ease, border 0.3s ease;
-    border: 1px solid transparent;
+    margin-bottom: 16px;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        0 1px 4px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
+/* Subtle glow effect on hover */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    box-shadow:
+        0 8px 24px rgba(76, 175, 80, 0.15),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: rgba(76, 175, 80, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Card Title Styles */
 .card h3 {
-    color: #eee;
-    margin-top: 0;
-    margin-bottom: 10px;
+    color: #4CAF50;
+    margin: 0 0 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
 }
 
 .card h3:empty {
@@ -24,81 +58,199 @@
     margin-top: 0;
 }
 
-/* Card header with name and title */
+/* Card Header with Name and Title */
 .card-header {
     text-align: center;
     margin-bottom: 20px;
-    padding: 10px 0;
+    padding: 12px 0 16px 0;
     border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+    position: relative;
+}
+
+.card-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4CAF50, transparent);
+    border-radius: 1px;
 }
 
 .card-name {
-    font-size: 1.4em;
-    margin-bottom: 8px;
-    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 8px 0;
+    color: #ffffff;
     font-weight: 700;
     letter-spacing: 0.5px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
 }
 
 .card-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #4CAF50;
-    margin-bottom: 0;
-    font-style: normal;
+    margin: 0;
     letter-spacing: 0.3px;
     line-height: 1.4;
     text-transform: uppercase;
-    font-size: 0.85em;
-    opacity: 0.9;
+    font-size: 0.85rem;
+    opacity: 0.95;
 }
 
-/* Special styling for profile info card */
+/* Special styling for transparent cards (like in navbar) */
 .profile-info-card {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    margin-bottom: 0;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.profile-info-card::before {
+    display: none;
 }
 
 .profile-info-card:hover {
-    box-shadow: none;
-    border: none;
+    box-shadow: none !important;
+    border: none !important;
+    transform: none !important;
 }
 
-/* Hover glow effect */
+/* Hover glow effect variant */
 .card.hover-glow:hover {
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
+    box-shadow:
+        0 0 20px rgba(76, 175, 80, 0.4),
+        0 8px 24px rgba(0, 0, 0, 0.3);
     border: 1px solid #4CAF50;
+}
+
+/* Content spacing */
+.card p {
+    margin: 0 0 12px 0;
+    line-height: 1.6;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lists in cards */
+.card ul,
+.card ol {
+    margin: 0 0 12px 0;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+/* Links in cards */
+.card a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #66bb6a;
+    text-decoration: underline;
 }
 
 /* Responsive adjustments for card header */
 @media (max-width: 768px) {
+    .card {
+        padding: 16px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+    }
+
     .card-header {
-        margin-bottom: 15px;
-        padding: 8px 0;
+        margin-bottom: 16px;
+        padding: 10px 0 12px 0;
     }
 
     .card-name {
-        font-size: 1.2em;
+        font-size: 1.25rem;
         margin-bottom: 6px;
     }
 
     .card-title {
-        font-size: 0.8em;
+        font-size: 0.8rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
+    .card {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
     .card-name {
-        font-size: 1.1em;
+        font-size: 1.15rem;
         margin-bottom: 5px;
     }
 
     .card-title {
-        font-size: 0.75em;
+        font-size: 0.75rem;
         line-height: 1.3;
+    }
+
+    .card h3 {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .card {
+        padding: 12px;
+    }
+
+    .card-name {
+        font-size: 1.1rem;
+    }
+
+    .card-title {
+        font-size: 0.7rem;
+    }
+}
+
+/* Focus states for accessibility */
+.card:focus-within {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .card::before {
+        transition: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid #4CAF50;
+        background: #000000;
+    }
+
+    .card-name {
+        color: #ffffff;
+    }
+
+    .card-title {
+        color: #4CAF50;
     }
 }
