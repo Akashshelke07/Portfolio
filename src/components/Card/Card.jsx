@@ -1,4 +1,3 @@
-// src/components/Card/Card.jsx
 import React from 'react';
 import './Card.css';
 
@@ -16,10 +15,10 @@ const Card = ({
       
       {/* Show name and job title if enabled */}
       {showNameAndTitle && (
-        <div className="card-header">
-          <div className="card-name">{name}</div>
-          <div className="card-title">{jobTitle}</div>
-        </div>
+        <header className="card-header">
+          <h2 className="card-name">{name}</h2>
+          <p className="card-title">{jobTitle}</p>
+        </header>
       )}
       
       {children}

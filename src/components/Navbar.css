@@ -1,40 +1,112 @@
-@media (max-width: 360px) {
-    .social-icons {
-        gap: 8px;
-    }
+/* Base Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 16px 16px 0;
+    border-right: 1px solid rgba(76, 175, 80, 0.2);
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
+}
 
-    .social-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 1em;
-        padding: 5px;
-    }
+/* Navbar Content */
+.navbar-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
-    .resume-button {
-        font-size: 0.9em;
-        padding: 8px 12px;
-    }
+.main-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.main-card .card {
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.profile-image {
+    width: 125px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid #4CAF50;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(76, 175, 80, 0.4);
+}
+
+.profile-info {
+    text-align: center;
+    width: 100%;
 }
 
 .profile-name {
-    font-size: 1.3em;
-    margin-bottom: 4px;
-    color: #fff;
-    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
 
 .profile-job-title {
-    font-size: 0.9em;
+    font-size: 1.2rem;
     font-weight: 500;
-    color: #aaa;
-    margin-bottom: 8px;
-    font-style: italic;
+    color: #4CAF50;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+    opacity: 0.9;
 }
 
 .profile-email {
-    font-size: 0.8em;
+    font-size: 1rem;
     color: #bbb;
-    margin-top: 5px;
+    line-height: 1.4;
 }
 
 .profile-email span {
@@ -46,6 +118,7 @@
     color: #4CAF50;
     text-decoration: none;
     transition: color 0.3s ease;
+    word-break: break-all;
 }
 
 .profile-email a:hover {
@@ -53,242 +126,204 @@
     text-decoration: underline;
 }
 
-.nav-link {
-    font-size: 0.95em;
-    padding: 9px 10px;
-}
-
-.navbar {
-    background-color: #1a1a1a;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-    width: 320px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transition: left 0.3s ease, width 0.3s ease;
-    border-radius: 0 20px 20px 0;
-    border-right: 2px solid #333;
-}
-
-/* Profile Section */
-.profile-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-.profile-image {
-    width: 200px;
-    height: 235px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-    border: 3px solid #4CAF50;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    margin: 0 auto;
-}
-
-.profile-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
-}
-
-.profile-info {
-    text-align: center;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* Layout Sections */
-.navbar-content {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: flex-start;
-}
-
-.main-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-bottom: 0;
-}
-
-.main-card .card {
-    background: linear-gradient(135deg, #2d2d2d, #333);
-    border: 1px solid #444;
-    padding: 25px;
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-    flex-shrink: 0;
-}
-
+/* Navigation Section */
 .nav-section {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 20px 0;
-    width: 100%;
+    margin: 20px 5px;
+    margin-bottom: 30px;
+    /* Added space to prevent overlap */
+    min-height: 0;
 }
 
-.resume-social-section {
-    flex-shrink: 0;
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Navigation */
 .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 8px;
 }
 
 .nav-links li {
-    margin-bottom: 6px;
+    margin: 0;
 }
 
 .nav-link {
-    color: white;
+    color: #e0e0e0;
     text-decoration: none;
-    padding: 14px 18px;
-    border-radius: 8px;
+    padding: 12px 16px;
+    border-radius: 10px;
     width: 100%;
     text-align: left;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
-    font-size: 1.1em;
+    font-size: 0.95rem;
+    font-weight: 500;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid transparent;
-    white-space: nowrap;
+    position: relative;
     overflow: hidden;
 }
 
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
 .nav-link:hover {
-    background: rgba(76, 175, 80, 0.1);
-    border-color: #4CAF50;
-    transform: translateX(5px);
-    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+    color: #ffffff;
+    border-color: rgba(76, 175, 80, 0.3);
+    transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .nav-link.active {
     background: linear-gradient(135deg, #4CAF50, #45a049);
-    color: white;
-    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    color: #ffffff;
+    border-color: #4CAF50;
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+}
+
+.nav-link.active::before {
+    display: none;
 }
 
 .nav-link.active:hover {
     background: linear-gradient(135deg, #45a049, #3d8b40);
-    transform: translateX(5px);
+    transform: translateX(4px);
 }
 
-/* Resume Button and Social Icons */
+/* Resume and Social Section */
+.resume-social-section {
+    flex-shrink: 0;
+    margin-top: 20px;
+    /* Increased margin for better spacing */
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    /* Increased padding */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .resume-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #555, #666);
-    color: white;
-    padding: 12px 20px;
+    color: #ffffff;
+    padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 200px;
-    margin-bottom: 15px;
+    max-width: 180px;
+    margin-bottom: 20px;
+    /* Increased margin between resume button and social icons */
 }
 
 .resume-button:hover {
     background: linear-gradient(135deg, #666, #777);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 11px;
+    flex-wrap: nowrap;
+    /* Changed from wrap to nowrap to keep icons in one row */
     width: 100%;
+    overflow-x: auto;
+    /* Allow horizontal scrolling if needed on very small screens */
 }
 
 .social-icon {
-    color: #ccc;
+    color: #aaa;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* Prevent icons from shrinking */
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.2), transparent);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover::before {
+    width: 100%;
 }
 
 .social-icon:hover {
     color: #4CAF50;
-    background: rgba(76, 175, 80, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(76, 175, 80, 0.3);
+    background: rgba(76, 175, 80, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(76, 175, 80, 0.3);
 }
 
-/* Card */
+/* Card Styles */
 .card {
     background: linear-gradient(135deg, #2a2a2a, #333);
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    color: #ccc;
-    transition: all 0.3s ease;
-    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card:hover {
-    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
-    border-color: #4CAF50;
+    box-shadow: 0 8px 24px rgba(76, 175, 80, 0.2);
+    border-color: rgba(76, 175, 80, 0.3);
     transform: translateY(-2px);
 }
 
 .card h3 {
     color: #4CAF50;
-    margin: 0 0 10px 0;
-    font-size: 1.1em;
+    margin: 0 0 12px 0;
+    font-size: 1.1rem;
     font-weight: 600;
+    line-height: 1.3;
 }
 
 .card h3:empty {
@@ -299,35 +334,89 @@
     margin-top: 0;
 }
 
-.content {
-    transition: margin-left 0.3s ease;
-    padding: 20px;
-    margin-left: 320px;
+/* Hamburger Menu */
+.hamburger-button {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.95));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
 }
 
-/* Backdrop for mobile */
+.hamburger-button:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(68, 68, 68, 0.95));
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Backdrop */
 .backdrop {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
     z-index: 999;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Responsive */
+/* Content Layout */
+.content {
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 32px;
+    margin-left: 300px;
+    min-height: 100vh;
+}
+
+/* Scrollbar Styling */
+.navbar-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.navbar-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+.navbar-content::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 2px;
+}
+
+.navbar-content::-webkit-scrollbar-thumb:hover {
+    background: #45a049;
+}
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
+    .hamburger-button {
+        display: block;
+    }
+
     .navbar {
         position: fixed;
         top: 0;
-        left: -320px;
+        left: -300px;
         height: 100vh;
-        width: 320px;
-        border-radius: 0;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+        width: 300px;
+        border-radius: 0 16px 16px 0;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.4);
         border-right: none;
+        transform: translateX(0);
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .navbar.mobile-open {
@@ -335,118 +424,187 @@
     }
 
     .navbar.mobile-closed {
-        left: -320px;
-    }
-
-    .content {
-        margin-left: 0 !important;
-        transition: none;
-        padding-top: 60px;
-    }
-
-    .hamburger-button {
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        background: linear-gradient(135deg, rgba(51, 51, 51, 0.9), rgba(76, 175, 80, 0.1));
-        border: 1px solid #4CAF50;
-        color: white;
-        cursor: pointer;
-        font-size: 1.5em;
-        padding: 8px 10px;
-        z-index: 1001;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-    }
-
-    .hamburger-button:hover {
-        background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(85, 85, 85, 0.9));
-        transform: scale(1.05);
+        left: -300px;
     }
 
     .backdrop {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .content {
+        margin-left: 0;
+        transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 20px 16px;
+        padding-top: 72px;
     }
 
     .profile-image {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .navbar-content {
-        padding: 15px;
+        padding: 16px 12px;
     }
 
     .main-card .card {
-        padding: 18px;
-        height: calc(100vh - 50px);
+        padding: 16px 0;
     }
 
     .profile-section {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .nav-section {
-        margin: 15px 0;
+        margin: 16px 0;
+        margin-bottom: 24px;
+        /* Maintained spacing on mobile */
     }
 
     .resume-social-section {
-        margin-top: 15px;
+        margin-top: 16px;
+        padding-top: 16px;
+        /* Adjusted for mobile */
     }
 
     .resume-button {
-        padding: 10px 15px;
-        font-size: 0.95em;
-        max-width: 180px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        max-width: 160px;
+        margin-bottom: 16px;
+        /* Adjusted for mobile */
+    }
+
+    .social-icons {
+        gap: 10px;
+        flex-wrap: nowrap;
+        /* Keep icons in one row on mobile too */
+    }
+
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .profile-name {
+        font-size: 1.25rem;
+    }
+
+    .profile-job-title {
+        font-size: 0.8rem;
+    }
+
+    .profile-email {
+        font-size: 0.7rem;
+    }
+
+    .nav-link {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .navbar {
+        width: 280px;
+        left: -280px;
+    }
+
+    .profile-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .resume-button {
+        max-width: 140px;
+        font-size: 0.8rem;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
     }
 
     .social-icons {
         gap: 8px;
+        /* Smaller gap on small screens to fit all icons */
     }
 
-    .social-icon {
-        width: 30px;
-        height: 30px;
+    .profile-name {
+        font-size: 1.15rem;
+    }
+
+    .profile-job-title {
+        font-size: 0.75rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    .content {
+        padding: 16px 12px;
     }
 }
 
-@media (max-width: 480px) {
+/* Extra Small Devices */
+@media (max-width: 360px) {
     .navbar {
         width: 260px;
         left: -260px;
     }
 
-    .profile-image {
-        width: 90px;
-        height: 140px;
-    }
-
-    .resume-button {
-        max-width: 150px;
+    .social-icons {
+        gap: 6px;
+        /* Even smaller gap for very small screens */
+        padding: 0 4px;
+        /* Small padding to prevent cutoff */
     }
 
     .social-icon {
         width: 25px;
         height: 25px;
+        min-width: 25px;
+        /* Ensure minimum size */
+    }
+
+    .resume-button {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        max-width: 130px;
+    }
+
+    .profile-name {
+        font-size: 1.1rem;
+    }
+
+    .profile-job-title {
+        font-size: 0.7rem;
     }
 }
 
-/* Scrollbar */
-.navbar-content::-webkit-scrollbar {
-    width: 6px;
+/* Focus States for Accessibility */
+.nav-link:focus,
+.resume-button:focus,
+.social-icon:focus,
+.hamburger-button:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
 }
 
-.navbar-content::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-}
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
 
-.navbar-content::-webkit-scrollbar-thumb {
-    background: #4CAF50;
-    border-radius: 3px;
-}
-
-.navbar-content::-webkit-scrollbar-thumb:hover {
-    background: #45a049;
+    .navbar,
+    .nav-link,
+    .profile-image,
+    .resume-button,
+    .social-icon,
+    .hamburger-button,
+    .backdrop,
+    .content {
+        transition: none;
+    }
 }
