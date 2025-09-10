@@ -141,11 +141,28 @@
     background: linear-gradient(135deg, rgba(156, 39, 176, 0.08) 0%, rgba(156, 39, 176, 0.02) 100%);
     border: 1px solid rgba(156, 39, 176, 0.15);
     transition: all 0.3s ease;
+    margin-bottom: 25px;
 }
 
 .professional-skills-card:hover {
     background: linear-gradient(135deg, rgba(156, 39, 176, 0.12) 0%, rgba(156, 39, 176, 0.04) 100%);
     box-shadow: 0 0 20px rgba(156, 39, 176, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Professional Certifications Card Styles */
+.professional-certifications-card {
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.08) 0%, rgba(255, 152, 0, 0.02) 100%);
+    border: 1px solid rgba(255, 152, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.professional-certifications-card:hover {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.12) 0%, rgba(255, 152, 0, 0.04) 100%);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.3);
     transform: translateY(-2px);
 }
 
@@ -176,6 +193,10 @@
 
 .professional-skills-card .section-title::after {
     background: linear-gradient(90deg, #9C27B0, #7B1FA2);
+}
+
+.professional-certifications-card .section-title::after {
+    background: linear-gradient(90deg, #FF9800, #F57C00);
 }
 
 /* Skills Content Styles */
@@ -257,6 +278,146 @@
     background: rgba(187, 134, 252, 0.1);
     border-radius: 12px;
     border: 1px solid rgba(187, 134, 252, 0.2);
+}
+
+/* Certifications Content Styles */
+.certifications-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.certification-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.certification-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 152, 0, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 152, 0, 0.1);
+}
+
+.certification-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.certification-badge {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 152, 0, 0.1));
+    border: 2px solid rgba(255, 152, 0, 0.3);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.certification-item:hover .certification-badge {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.3), rgba(255, 152, 0, 0.15));
+    border-color: rgba(255, 152, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.certification-icon {
+    font-size: 1.8rem;
+    filter: drop-shadow(0 0 8px rgba(255, 152, 0, 0.6));
+}
+
+.certification-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.certification-title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.certification-link {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.certification-link:hover {
+    color: #ffcc80;
+    text-shadow: 0 0 8px rgba(255, 204, 128, 0.4);
+}
+
+.certification-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #FF9800, #F57C00);
+    transition: width 0.3s ease;
+}
+
+.certification-link:hover::after {
+    width: 100%;
+}
+
+.certification-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.certification-issuer {
+    color: #ffcc80;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.certification-date {
+    color: #bbb;
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.certification-status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.certification-status.active {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.certification-description {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 5px;
+    padding-left: 80px;
 }
 
 /* Experience Content Wrapper */
@@ -409,6 +570,7 @@
     /* Professional Skills - Tablet */
     .professional-skills-card {
         padding: 25px;
+        margin-bottom: 20px;
     }
 
     .professional-skills-card .section-title {
@@ -452,6 +614,65 @@
 
     .skill-level {
         font-size: 0.8rem;
+    }
+
+    /* Professional Certifications - Tablet */
+    .professional-certifications-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    .professional-certifications-card .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .certifications-content {
+        gap: 18px;
+    }
+
+    .certification-item {
+        padding: 20px;
+    }
+
+    .certification-header {
+        gap: 15px;
+        margin-bottom: 12px;
+    }
+
+    .certification-badge {
+        width: 50px;
+        height: 50px;
+    }
+
+    .certification-icon {
+        font-size: 1.5rem;
+    }
+
+    .certification-title {
+        font-size: 1.1rem;
+    }
+
+    .certification-meta {
+        gap: 12px;
+    }
+
+    .certification-issuer {
+        font-size: 0.85rem;
+    }
+
+    .certification-date {
+        font-size: 0.8rem;
+    }
+
+    .certification-status {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+
+    .certification-description {
+        font-size: 0.9rem;
+        padding-left: 65px;
     }
 
     /* Projects section responsive */
@@ -558,6 +779,7 @@
     /* Professional Skills - Mobile */
     .professional-skills-card {
         padding: 20px;
+        margin-bottom: 15px;
     }
 
     .professional-skills-card .section-title {
@@ -610,6 +832,82 @@
     .skill-level {
         font-size: 0.75rem;
         padding: 3px 6px;
+    }
+
+    /* Professional Certifications - Mobile */
+    .professional-certifications-card {
+        padding: 20px;
+    }
+
+    .professional-certifications-card .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+    }
+
+    .professional-certifications-card .section-title::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .certifications-content {
+        gap: 15px;
+    }
+
+    .certification-item {
+        padding: 18px;
+    }
+
+    .certification-header {
+        gap: 12px;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .certification-badge {
+        width: 45px;
+        height: 45px;
+        align-self: flex-start;
+    }
+
+    .certification-icon {
+        font-size: 1.3rem;
+    }
+
+    .certification-info {
+        width: 100%;
+        margin-top: -5px;
+    }
+
+    .certification-title {
+        font-size: 1rem;
+    }
+
+    .certification-meta {
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .certification-issuer {
+        font-size: 0.8rem;
+    }
+
+    .certification-date {
+        font-size: 0.75rem;
+        padding: 2px 6px;
+    }
+
+    .certification-status {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+
+    .certification-description {
+        font-size: 0.85rem;
+        padding-left: 0;
+        margin-top: 10px;
+        line-height: 1.5;
     }
 
     /* Projects section mobile */

@@ -231,6 +231,172 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div className="card professional-certifications-card">
+            <h3 className="section-title">Professional Certifications</h3>
+            <div className="certifications-content">
+              <div className="certification-item">
+                <div className="certification-header">
+                  <div className="certification-badge">
+                    <span className="certification-icon">⚙️</span>
+                  </div>
+                  <div className="certification-info">
+                    <h4 className="certification-title">
+                      <a href="https://aws.amazon.com/certification/certified-devops-engineer-professional/" target="_blank" rel="noopener noreferrer" className="certification-link">
+                        DevOps Engineering Certification
+                      </a>
+                    </h4>
+                    <div className="certification-meta">
+                      <span className="certification-issuer">AWS / Industry Standard</span>
+                      <span className="certification-date">2024</span>
+                    </div>
+                    <div className="certification-status active">Active</div>
+                  </div>
+                </div>
+                <div className="certification-description">
+                  Expertise in CI/CD pipelines, infrastructure automation, containerization with Docker, Kubernetes orchestration, and DevOps best practices for scalable application deployment.
+                </div>
+              </div>
+
+              <div className="certification-item">
+                <div className="certification-header">
+                  <div className="certification-badge">
+                    <span className="certification-icon">🤖</span>
+                  </div>
+                  <div className="certification-info">
+                    <h4 className="certification-title">
+                      <a href="https://www.coursera.org/professional-certificates/generative-ai" target="_blank" rel="noopener noreferrer" className="certification-link">
+                        Generative AI Certification
+                      </a>
+                    </h4>
+                    <div className="certification-meta">
+                      <span className="certification-issuer">Industry Recognized Platform</span>
+                      <span className="certification-date">2024</span>
+                    </div>
+                    <div className="certification-status active">Active</div>
+                  </div>
+                </div>
+                <div className="certification-description">
+                  Comprehensive knowledge in Large Language Models (LLMs), prompt engineering, AI application development, and implementing generative AI solutions in production environments.
+                </div>
+              </div>
+
+              <div className="certification-item">
+                <div className="certification-header">
+                  <div className="certification-badge">
+                    <span className="certification-icon">🧠</span>
+                  </div>
+                  <div className="certification-info">
+                    <h4 className="certification-title">
+                      <a href="https://www.coursera.org/professional-certificates/machine-learning-engineering" target="_blank" rel="noopener noreferrer" className="certification-link">
+                        Machine Learning Certification
+                      </a>
+                    </h4>
+                    <div className="certification-meta">
+                      <span className="certification-issuer">Industry Recognized Platform</span>
+                      <span className="certification-date">2024</span>
+                    </div>
+                    <div className="certification-status active">Active</div>
+                  </div>
+                </div>
+                <div className="certification-description">
+                  Proficiency in supervised and unsupervised learning algorithms, model training and deployment, data preprocessing, and implementing ML pipelines for real-world applications.
+                </div>
+              </div>
+
+              <div className="certification-item">
+                <div className="certification-header">
+                  <div className="certification-badge">
+                    <span className="certification-icon">💻</span>
+                  </div>
+                  <div className="certification-info">
+                    <h4 className="certification-title">
+                      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className="certification-link">
+                        JavaScript Developer Certification
+                      </a>
+                    </h4>
+                    <div className="certification-meta">
+                      <span className="certification-issuer">Industry Standard</span>
+                      <span className="certification-date">2023</span>
+                    </div>
+                    <div className="certification-status active">Active</div>
+                  </div>
+                </div>
+                <div className="certification-description">
+                  Advanced expertise in ES6+ features, asynchronous programming, DOM manipulation, modern JavaScript frameworks, and building responsive web applications.
+                </div>
+              </div>
+
+              <div className="certification-item">
+                <div className="certification-header">
+                  <div className="certification-badge">
+                    <span className="certification-icon">☕</span>
+                  </div>
+                  <div className="certification-info">
+                    <h4 className="certification-title">
+                      <a href="https://education.oracle.com/java-se-certification" target="_blank" rel="noopener noreferrer" className="certification-link">
+                        Core Java Programming Certification
+                      </a>
+                    </h4>
+                    <div className="certification-meta">
+                      <span className="certification-issuer">Oracle / Industry Standard</span>
+                      <span className="certification-date">2023</span>
+                    </div>
+                    <div className="certification-status active">Active</div>
+                  </div>
+                </div>
+                <div className="certification-description">
+                  Strong foundation in object-oriented programming, data structures, algorithms, exception handling, and building enterprise-grade Java applications.
+                </div>
+              </div>
+
+              <div className="certification-item">
+                <div className="certification-header">
+                  <div className="certification-badge">
+                    <span className="certification-icon">🌐</span>
+                  </div>
+                  <div className="certification-info">
+                    <h4 className="certification-title">
+                      <a href="https://www.geeksforgeeks.org/courses/mongodb-developers-toolkit-crud-mastery" target="_blank" rel="noopener noreferrer" className="certification-link">
+                        MongoDB Developer Certification
+                      </a>
+                    </h4>
+                    <div className="certification-meta">
+                      <span className="certification-issuer">GeeksforGeeks (GFG)</span>
+                      <span className="certification-date">2023</span>
+                    </div>
+                    <div className="certification-status active">Active</div>
+                  </div>
+                </div>
+                <div className="certification-description">
+                  Comprehensive understanding of NoSQL database design, CRUD operations, aggregation pipelines, indexing strategies, and MongoDB deployment in production environments.
+                </div>
+              </div>
+
+              <div className="certification-item">
+                <div className="certification-header">
+                  <div className="certification-badge">
+                    <span className="certification-icon">🐍</span>
+                  </div>
+                  <div className="certification-info">
+                    <h4 className="certification-title">
+                      <a href="https://www.python.org/about/success/" target="_blank" rel="noopener noreferrer" className="certification-link">
+                        Python Programming Certification
+                      </a>
+                    </h4>
+                    <div className="certification-meta">
+                      <span className="certification-issuer">Industry Standard</span>
+                      <span className="certification-date">2023</span>
+                    </div>
+                    <div className="certification-status active">Active</div>
+                  </div>
+                </div>
+                <div className="certification-description">
+                  Proficiency in Python programming, data manipulation with pandas, web development with Flask/Django, automation scripting, and integration with machine learning libraries.
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>

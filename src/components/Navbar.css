@@ -1,27 +1,56 @@
 @media (max-width: 360px) {
     .social-icons {
-        gap: 4px;
+        gap: 8px;
     }
 
     .social-icon {
-        width: 26px;
-        height: 26px;
-        font-size: 0.75em;
-        padding: 4px;
-        min-width: 26px;
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .resume-button {
+        font-size: 0.9em;
+        padding: 8px 12px;
     }
 }
 
 .profile-name {
-    font-size: 1.2em;
+    font-size: 1.3em;
+    margin-bottom: 4px;
+    color: #fff;
+    font-weight: 600;
 }
 
-.profile-title {
-    font-size: 0.85em;
+.profile-job-title {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #aaa;
+    margin-bottom: 8px;
+    font-style: italic;
 }
 
 .profile-email {
-    font-size: 0.75em;
+    font-size: 0.8em;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+.profile-email span {
+    color: #ccc;
+    font-weight: 500;
+}
+
+.profile-email a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-email a:hover {
+    color: #66bb6a;
+    text-decoration: underline;
 }
 
 .nav-link {
@@ -46,8 +75,7 @@
     border-right: 2px solid #333;
 }
 
-/* Remove old header and footer styles */
-
+/* Profile Section */
 .profile-image-container {
     display: flex;
     justify-content: center;
@@ -57,14 +85,16 @@
 }
 
 .profile-image {
-    width: 140px;
-    height: 220px;
+    width: 200px;
+    height: 235px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
     border: 3px solid #4CAF50;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto;
 }
 
 .profile-image:hover {
@@ -75,64 +105,10 @@
 .profile-info {
     text-align: center;
     width: 100%;
-}
-
-.profile-name {
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    color: #fff;
-    font-weight: 600;
-}
-
-.profile-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9em;
-    color: #4CAF50;
-    margin: 0;
-    font-weight: 500;
-}
-
-.react-icon {
-    margin-right: 8px;
-    color: #61dafb;
-    animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.profile-email {
-    font-size: 0.8em;
-    color: #bbb;
     margin-top: 10px;
 }
 
-.profile-email span {
-    color: #ccc;
-    font-weight: 500;
-}
-
-.profile-email a {
-    color: #4CAF50;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.profile-email a:hover {
-    color: #66bb6a;
-    text-decoration: underline;
-}
-
-/* Single Section Layout */
+/* Layout Sections */
 .navbar-content {
     flex-grow: 1;
     overflow-y: auto;
@@ -147,7 +123,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 0;
 }
 
@@ -158,10 +134,9 @@
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
-/* Profile Section */
 .profile-section {
     display: flex;
     flex-direction: column;
@@ -171,21 +146,22 @@
     flex-shrink: 0;
 }
 
-/* Navigation Section */
 .nav-section {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 20px 0;
+    width: 100%;
 }
 
-/* Footer Section */
-.footer-section {
+.resume-social-section {
     flex-shrink: 0;
     margin-top: 20px;
+    width: 100%;
+    text-align: center;
 }
 
+/* Navigation */
 .nav-links {
     list-style: none;
     padding: 0;
@@ -235,41 +211,37 @@
     transform: translateX(5px);
 }
 
-/* Remove old footer styles */
-
+/* Resume Button and Social Icons */
 .resume-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #555, #666);
     color: white;
-    padding: 12px 18px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 1em;
-    margin-bottom: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    box-sizing: border-box;
-    border: 1px solid transparent;
+    max-width: 200px;
+    margin-bottom: 15px;
 }
 
 .resume-button:hover {
     background: linear-gradient(135deg, #666, #777);
-    border-color: #4CAF50;
-    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-top: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -277,27 +249,24 @@
     color: #ccc;
     text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 0.9em;
-    padding: 6px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-    min-width: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .social-icon:hover {
     color: #4CAF50;
-    background: rgba(76, 175, 80, 0.1);
-    transform: translateY(-2px) scale(1.1);
-    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    background: rgba(76, 175, 80, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(76, 175, 80, 0.3);
 }
 
-/* Card Styles */
+/* Card */
 .card {
     background: linear-gradient(135deg, #2a2a2a, #333);
     border-radius: 10px;
@@ -322,7 +291,6 @@
     font-weight: 600;
 }
 
-/* Hide card title when empty */
 .card h3:empty {
     display: none;
 }
@@ -349,6 +317,7 @@
     display: none;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .navbar {
         position: fixed;
@@ -401,8 +370,8 @@
     }
 
     .profile-image {
-        width: 130px;
-        height: 180px;
+        width: 120px;
+        height: 120px;
     }
 
     .navbar-content {
@@ -422,18 +391,23 @@
         margin: 15px 0;
     }
 
-    .footer-section {
+    .resume-social-section {
         margin-top: 15px;
-    }
-
-    .nav-link {
-        padding: 12px 15px;
-        font-size: 1em;
     }
 
     .resume-button {
         padding: 10px 15px;
         font-size: 0.95em;
+        max-width: 180px;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -444,23 +418,21 @@
     }
 
     .profile-image {
-        width: 100px;
+        width: 90px;
         height: 140px;
     }
 
-    .social-icons {
-        gap: 6px;
+    .resume-button {
+        max-width: 150px;
     }
 
     .social-icon {
-        width: 28px;
-        height: 28px;
-        font-size: 1em;
-        padding: 4px;
+        width: 25px;
+        height: 25px;
     }
 }
 
-/* Custom scrollbar for navbar content */
+/* Scrollbar */
 .navbar-content::-webkit-scrollbar {
     width: 6px;
 }
